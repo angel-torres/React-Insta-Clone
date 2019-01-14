@@ -1,3 +1,27 @@
+.post-container {
+    margin: 0 auto;
+    width: 800px;
+    border: 2px solid lightgrey;
+}
+
 .post-header {
     display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 15px;
 }
+
+.thumbnail {
+    height: 100%; 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.likes-container {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+}
+
