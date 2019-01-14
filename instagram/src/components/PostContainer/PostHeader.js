@@ -3,8 +3,9 @@ import './PostContainer.css';
 
 const PostHeader = (props) => {
     return (
-      <div>
-          
+      <div className="post-header">
+          <img src={props.thumbnailUrl}/>
+          <h2>{props.username}</h2>
       </div>
     )
 }

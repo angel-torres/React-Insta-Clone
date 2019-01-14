@@ -4,6 +4,7 @@ import './PostContainer.css';
 const Image = (props) => {
     return (
       <div>
+          <img src={props.image}/>
       </div>
     )
 }
