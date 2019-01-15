@@ -8,7 +8,6 @@ import LikesContainer from './LikesContainer';
 
 const PostContainer = (props) => {
     return (
-        
       <div className="post-container">
           <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl}/>
 
@@ -16,14 +15,12 @@ const PostContainer = (props) => {
 
           <LikesContainer likes={props.post.likes}/>
 
-          <CommentSection handleChange={props.handleChange} inputText={props.inputText} comments={props.post.comments}/>
+          <CommentSection comments={props.post.comments}/>
       </div>
     )
 }
 
 PostContainer.propTypes = {
-    inputText: PropTypes.string,
-    handleChange: PropTypes.func,
     post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,

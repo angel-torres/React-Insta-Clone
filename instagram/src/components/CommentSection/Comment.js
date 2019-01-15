@@ -17,4 +17,10 @@ Comment.propTypes = {
     })
 }
 
+Comment.propTypes = {
+    addComment: PropTypes.func,
+    inputText: PropTypes.string,
+    handleChange: PropTypes.func,
+};
+
 export default Comment;

@@ -9,14 +9,7 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData,
-      inputText: ''
     }
-  }
-
-  handleChange= e => {
-    this.setState({
-      inputText: e.target.value
-    })
   }
 
   render() {
@@ -24,7 +17,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {this.state.dummyData.map( post => {
-          return <PostContainer handleChange={this.handleChange} inputText={this.state.inputText} key={post.timestamp} post={post}/>
+          return <PostContainer key={post.timestamp} post={post}/>
         })}
       </div>
     );

@@ -5,7 +5,7 @@ import './CommentSection.css';
 const AddComment = (props) => {
     return (
       <div className="comment">
-        <form className="add-comment" onSubmit={()=>{console.log("it works")}}>
+        <form name={props.postKey} className="add-comment" onSubmit={props.addComment}>
           <input className="add-comment"  onChange={props.handleChange} value={props.inputText} type="text" placeholder="Add a comment..."/>
         </form>
       </div>
@@ -13,6 +13,9 @@ const AddComment = (props) => {
 }
 
 AddComment.propTypes = {
+    key: PropTypes.string,
+    timeStamp: PropTypes.string,
+    addComment: PropTypes.func,
     handleChange: PropTypes.func,
     inputText: PropTypes.string,
 }
