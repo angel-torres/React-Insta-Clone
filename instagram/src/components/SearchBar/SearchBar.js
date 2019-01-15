@@ -8,7 +8,7 @@ const SearchBar = (props) => {
             <img className="insta-logo" src="https://img.icons8.com/ios/30/000000/instagram-new.png"/>
             <h1>Instagram</h1>
         </div>
-        <input type="text" placeholder="search"/>
+        <input className="search-input" type="text" placeholder="search"/>
         <div className="right-search-container">
             <img className="search-logo" src="https://img.icons8.com/ios/50/000000/compass.png"/>
             <img className="search-logo" src="https://img.icons8.com/ios/50/000000/like.png" />
