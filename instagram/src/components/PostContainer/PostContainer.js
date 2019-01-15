@@ -16,12 +16,14 @@ const PostContainer = (props) => {
 
           <LikesContainer likes={props.post.likes}/>
 
-          <CommentSection comments={props.post.comments}/>
+          <CommentSection handleChange={props.handleChange} inputText={props.inputText} comments={props.post.comments}/>
       </div>
     )
 }
 
 PostContainer.propTypes = {
+    inputText: PropTypes.string,
+    handleChange: PropTypes.func,
     post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,

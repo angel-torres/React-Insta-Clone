@@ -5,8 +5,7 @@ import './CommentSection.css';
 const Comment = (props) => {
     return (
       <div className="comment">
-          <h3>{props.username}</h3>
-          <p>{props.text}</p>
+          <p><strong>{props.username}</strong> {props.text}</p>
       </div>
     )
 }

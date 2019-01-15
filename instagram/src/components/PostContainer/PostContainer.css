@@ -1,14 +1,14 @@
 .post-container {
     margin: 0 auto;
-    width: 800px;
-    border: 2px solid lightgrey;
+    width: 600px;
+    border: 1px solid lightgrey;
 }
 
 .post-header {
     display: flex;
     height: 50px;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .thumbnail {
@@ -21,7 +21,22 @@
     width: 100px;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     align-items: flex-start;
+    padding: 10px;
+}
+
+.post-picture {
+    width: 100%;
+    height: 600px;
+}
+
+.like-icon {
+    padding-right: 10px;
+}
+
+.likes {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
 }
 

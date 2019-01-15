@@ -5,7 +5,7 @@ import './PostContainer.css';
 const Image = (props) => {
     return (
       <div>
-          <img alt="post" src={props.image}/>
+          <img alt="post" src={props.image} className="post-picture"/>
       </div>
     )
 }

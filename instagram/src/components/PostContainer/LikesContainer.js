@@ -6,8 +6,8 @@ const LikesContainer = (props) => {
     return (
       <div className="likes-container">
         <div className="like-container-icons">
-            <img alt="like icon" src="https://img.icons8.com/ios/50/000000/like.png" />
-            <img alt="comment icon" src="https://img.icons8.com/ios/50/000000/speech-bubble.png"/>
+            <img className="like-icon" alt="like icon" src="https://img.icons8.com/ios/30/000000/like.png" />
+            <img className="like-icon" alt="comment icon" src="https://img.icons8.com/ios/30/000000/speech-bubble.png"/>
         </div>
         <p className="likes">{props.likes} likes</p>
       </div>
