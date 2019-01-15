@@ -4,8 +4,30 @@
     height: 70px;
     background-color: aliceblue;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .left-search-container {
     display: flex;
+}
+
+.insta-logo {
+    height: 50px;
+    padding: 0 10px 0 0;
+}
+
+.left-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-logo {
+    padding: 0 5px;
 }
