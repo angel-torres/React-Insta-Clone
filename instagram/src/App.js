@@ -6,13 +6,22 @@ import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
+    console.log("constructor")
     super();
     this.state = {
-      dummyData: dummyData,
+      dummyData: [],
     }
   }
 
+  componentDidMount() {
+    console.log("componentdidmount")
+    this.setState({
+      dummyData: dummyData,
+    })
+  }
+
   render() {
+    console.log("render")
     return (
       <div className="App">
         <SearchBar />

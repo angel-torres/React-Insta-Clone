@@ -61,7 +61,7 @@ class CommentSection extends React.Component  {
                 {this.state.comments.map( (comment, i) => {
                     return <Comment username={comment.username} text={comment.text} key={i}/>
                 })}
-                <AddComment addComment={this.addComment} handleChange={this.handleChange} inputText={this.inputText} />
+                <AddComment addComment={this.addComment} handleChange={this.handleChange} inputText={this.state.inputText} />
             </div>
           )
     }
@@ -72,9 +72,13 @@ class CommentSection extends React.Component  {
 
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.shape({
-        username: PropTypes.string,
-            text: PropTypes.string,
+        username: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired,
     }))
+}
+
+CommentSection.defaultProps = {
+    comments: [],
 }
 
 export default CommentSection;
