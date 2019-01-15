@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
+      searchInput: '',
     }
   }
 
@@ -20,11 +21,29 @@ class App extends Component {
     })
   }
 
+  handleChanges = e => {
+      this.setState({
+      searchInput: e.target.value,
+    })
+  }
+
+  search = (e) => {
+    e.preventDefault();
+    
+    if (this.state.searchInput === '') {
+      this.setState({
+        dummyData: dummyData,
+      })
+    } else {this.setState({
+      dummyData: (this.state.dummyData.filter( post => post.username.includes(this.state.searchInput)))
+    })}
+  }
+
   render() {
     console.log("render")
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} handleChanges={this.handleChanges} searchInput={this.state.searchInput} />
         {this.state.dummyData.map( post => {
           return <PostContainer key={post.timestamp} post={post}/>
         })}
