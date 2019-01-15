@@ -46,17 +46,19 @@ class CommentSection extends React.Component  {
       addComment = (e) => {
         e.preventDefault();
         this.setState({
-          comments: [...this.props.comments, {
+          comments: [...this.state.comments, {
             username: "Angel",
             text: this.state.inputText,
-          }]
+          }],
+          inputText: '',
         })
+        
       }
 
     render() {
         return (
             <div className="comments">
-                {this.props.comments.map( (comment, i) => {
+                {this.state.comments.map( (comment, i) => {
                     return <Comment username={comment.username} text={comment.text} key={i}/>
                 })}
                 <AddComment addComment={this.addComment} handleChange={this.handleChange} inputText={this.inputText} />
