@@ -29,18 +29,18 @@ class App extends Component {
 
   search = (e) => {
     e.preventDefault();
-    
-    if (this.state.searchInput === '') {
+
+    if (this.state.searchInput === "") {
       this.setState({
         dummyData: dummyData,
       })
     } else {this.setState({
       dummyData: (this.state.dummyData.filter( post => post.username.includes(this.state.searchInput)))
     })}
+
   }
 
   render() {
-    console.log("render")
     return (
       <div className="App">
         <SearchBar search={this.search} handleChanges={this.handleChanges} searchInput={this.state.searchInput} />
