@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {AddCommentInput} from '../StyledComponents'
 import './CommentSection.css';
 
-const AddCommentInput = styled.input`
-  width: 100%;
-  border: none;
-  height: 30px;
-`;
+// const AddCommentInput = styled.input`
+//   width: 100%;
+//   border: none;
+//   height: 30px;
+// `;
 
 const AddComment = (props) => {
     return (

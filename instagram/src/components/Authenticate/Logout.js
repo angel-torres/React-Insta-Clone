@@ -1,18 +1,19 @@
 import React from 'react';
 import './Login.css';
 import styled from 'styled-components';
+import {StyledButton} from '../StyledComponents'
 
-const StyledButton = styled.button`
-    padding: 10px;
-    width: 100px;
-    margin: 20px;
-    background-color: white;
+// const StyledButton = styled.button`
+//     padding: 10px;
+//     width: 100px;
+//     margin: 20px;
+//     background-color: white;
 
-    &:hover {
-        background-color: black;
-        color: white;
-    }
-`;
+//     &:hover {
+//         background-color: black;
+//         color: white;
+//     }
+// `;
 
 function Logout(props) {
     return (

@@ -7,11 +7,13 @@ import PostHeader from './PostHeader';
 import Image from './Image';
 import LikesContainer from './LikesContainer';
 
-const PostStyledContainer = styled.div`
-    margin: 0 auto;
-    width: 600px;
-    border: 1px solid lightgrey;
-`;
+import {PostStyledContainer} from '../StyledComponents'
+
+// const PostStyledContainer = styled.div`
+//     margin: 0 auto;
+//     width: 600px;
+//     border: 1px solid lightgrey;
+// `;
 
 const PostContainer = (props) => {
     return (
