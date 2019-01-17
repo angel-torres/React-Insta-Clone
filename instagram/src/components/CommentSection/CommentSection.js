@@ -30,12 +30,19 @@ import AddComment from './AddComment'
 
 class CommentSection extends React.Component  {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             inputText: '',
             comments: [...props.comments],
         }
     }
+
+//     componentDidMount(props) {
+//     this.setState({
+//         inputText: '',
+//       comments: [...props.comments],
+//     })
+//   }
 
     handleChange = e => {
         this.setState({

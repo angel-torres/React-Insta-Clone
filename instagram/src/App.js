@@ -1,55 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data.js';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostContainer/PostsPage';
+import authenticate from './components/Authenticate/authenticate';
+import LogInPage from './components/Authenticate/LogInPage'
+
 
 class App extends Component {
   constructor() {
-    console.log("constructor")
     super();
     this.state = {
-      dummyData: [],
-      searchInput: '',
+      username: localStorage.getItem("username"),
+      password: localStorage.getItem("password"),
     }
   }
 
-  componentDidMount() {
-    console.log("componentdidmount")
-    this.setState({
-      dummyData: dummyData,
-    })
-  }
-
-  handleChanges = e => {
-      this.setState({
-      searchInput: e.target.value,
-    })
-  }
-
-  search = (e) => {
-    e.preventDefault();
-
-    if (this.state.searchInput === "") {
-      this.setState({
-        dummyData: dummyData,
-      })
-    } else {this.setState({
-      dummyData: (this.state.dummyData.filter( post => post.username.includes(this.state.searchInput)))
-    })}
-
-  }
+  setLocalStorage() {
+    localStorage.setItem("username", document.getElementById("username").value);
+    localStorage.setItem("password", document.getElementById("password").value);
+    console.log('button works')
+}
 
   render() {
+ 
+    console.log(localStorage)
     return (
       <div className="App">
-        <SearchBar search={this.search} handleChanges={this.handleChanges} searchInput={this.state.searchInput} />
-        {this.state.dummyData.map( post => {
-          return <PostContainer key={post.timestamp} post={post}/>
-        })}
+        <Display setLocalStorage={this.setLocalStorage} username={this.state.username} password={this.state.password} />
       </div>
     );
   }
 }
+
+const Display = authenticate(LogInPage)(PostsPage);
 
 export default App;
