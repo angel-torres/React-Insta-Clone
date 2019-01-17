@@ -14,15 +14,7 @@ class App extends Component {
     }
   }
 
-  setLocalStorage() {
-    localStorage.setItem("username", document.getElementById("username").value);
-    localStorage.setItem("password", document.getElementById("password").value);
-    console.log('button works')
-}
-
   render() {
- 
-    console.log(localStorage)
     return (
       <div className="App">
         <Display setLocalStorage={this.setLocalStorage} username={this.state.username} password={this.state.password} />
