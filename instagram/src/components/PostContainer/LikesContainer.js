@@ -1,6 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
 import './PostContainer.css';
+
+
+const LikesStyledContainer = styled.div`
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+`;
+
+const LikeStyledIcon = styled.img`
+  padding-right: 10px;
+`;
+
+const StyledLlikes = styled.p`
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+`;
+
 
 class LikesContainer extends React.Component {
     constructor(props) {
@@ -27,13 +48,13 @@ class LikesContainer extends React.Component {
 
     render() {
       return(
-      <div className="likes-container">
+      <LikesStyledContainer className="likes-container">
         <div className="like-container-icons">
-            <img onClick={this.addLike} className="like-icon" alt="like icon" src={(this.state.liked === false) ? "https://img.icons8.com/ios/30/000000/like.png" : "https://img.icons8.com/office/30/000000/hearts.png"} />
-            <img className="like-icon" alt="comment icon" src="https://img.icons8.com/ios/30/000000/speech-bubble.png"/>
+            <LikeStyledIcon onClick={this.addLike} className="like-icon" alt="like icon" src={(this.state.liked === false) ? "https://img.icons8.com/ios/30/000000/like.png" : "https://img.icons8.com/office/30/000000/hearts.png"} />
+            <LikeStyledIcon className="like-icon" alt="comment icon" src="https://img.icons8.com/ios/30/000000/speech-bubble.png"/>
         </div>
-        <p className="likes">{this.state.likes} likes</p>
-      </div>
+        <StyledLlikes className="likes">{this.state.likes} likes</StyledLlikes>
+      </LikesStyledContainer>
       )
     }
 }

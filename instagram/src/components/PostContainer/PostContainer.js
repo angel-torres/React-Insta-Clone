@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import Image from './Image';
 import LikesContainer from './LikesContainer';
 
+const PostStyledContainer = styled.div`
+    margin: 0 auto;
+    width: 600px;
+    border: 1px solid lightgrey;
+`;
+
 const PostContainer = (props) => {
     return (
-      <div className="post-container">
+      <PostStyledContainer className="post-container">
           <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl}/>
 
           <Image image={props.post.imageUrl}/>
@@ -16,7 +23,7 @@ const PostContainer = (props) => {
           <LikesContainer likes={props.post.likes}/>
 
           <CommentSection comments={props.post.comments}/>
-      </div>
+      </PostStyledContainer>
     )
 }
 

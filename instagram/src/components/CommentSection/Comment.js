@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import styled from 'styled-components';
+// import './CommentSection.css';
+
+const StyledComment = styled.div`
+display: flex;
+`;
 
 const Comment = (props) => {
     return (
-      <div className="comment">
+      <StyledComment className="comment">
           <p><strong>{props.username}</strong> {props.text}</p>
-      </div>
+      </StyledComment>
     )
 }
 

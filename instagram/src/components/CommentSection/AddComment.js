@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import './CommentSection.css';
+
+const AddCommentInput = styled.input`
+  width: 100%;
+  border: none;
+  height: 30px;
+`;
 
 const AddComment = (props) => {
     return (
       <div className="comment">
         <form name={props.postKey} className="add-comment" onSubmit={props.addComment}>
-          <input className="add-comment"  onChange={props.handleChange} value={props.inputText} type="text" placeholder="Add a comment..."/>
+          <AddCommentInput className="add-comment"  onChange={props.handleChange} value={props.inputText} type="text" placeholder="Add a comment..."/>
         </form>
       </div>
     )
