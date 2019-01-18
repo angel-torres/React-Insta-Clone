@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import {StyledComments} from '../StyledComponents'
-// import './CommentSection.css';
 import Comment from './Comment';
-import AddComment from './AddComment'
-
-// const StyledComments = styled.div`
-//     padding: 10px;
-// `;
+import AddComment from './AddComment';
 
 class CommentSection extends React.Component  {
     constructor(props) {

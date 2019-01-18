@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import Image from './Image';
 import LikesContainer from './LikesContainer';
 
 import {PostStyledContainer} from '../StyledComponents'
-
-// const PostStyledContainer = styled.div`
-//     margin: 0 auto;
-//     width: 600px;
-//     border: 1px solid lightgrey;
-// `;
 
 const PostContainer = (props) => {
     return (

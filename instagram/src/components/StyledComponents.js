@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 
@@ -87,3 +86,50 @@ export const PostPicture = styled.img`
     width: 100%;
     height: 600px;
 `;
+
+export const StyledSearchBar = styled.div`
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 20px;
+`;
+
+export const StyledLeftSearchContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const RightSearchContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const StyledInstaLogo = styled.img`
+    height: 50px;
+    padding: 0 10px 0 0;
+`;
+
+export const StyledSearchLogo = styled.img`
+    padding: 0 10px;
+    width: 30px;
+`;
+
+export const StyledSearchInput = styled.input`
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid lightgrey;
+    color: black;
+    border-radius: 5px;
+`;
+
+
+

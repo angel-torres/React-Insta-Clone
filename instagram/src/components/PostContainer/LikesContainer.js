@@ -1,28 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'
-import './PostContainer.css';
 import {LikesStyledContainer, LikeStyledIcon, StyledLlikes} from '../StyledComponents';
-
-
-// const LikesStyledContainer = styled.div`
-//   width: 100px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   padding: 10px;
-// `;
-
-// const LikeStyledIcon = styled.img`
-//   padding-right: 10px;
-// `;
-
-// const StyledLlikes = styled.p`
-//   padding: 0;
-//   margin: 0;
-//   font-weight: bold;
-// `;
-
 
 class LikesContainer extends React.Component {
     constructor(props) {
